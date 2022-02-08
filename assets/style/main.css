@@ -28,9 +28,11 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
-  margin: 0 15px;
   display: flex;
   flex-direction: column; }
+  @media screen and (min-width: 321px) {
+    .card {
+      margin: 0 15px; } }
   .card figure {
     margin: 0; }
     .card figure img {
@@ -60,7 +62,7 @@ img {
       max-height: 209px;
       max-width: 150px; }
   .card__bottom {
-    height: 306px;
+    height: auto;
     background-color: #e90051;
     color: #38003c;
     position: relative;
@@ -79,14 +81,19 @@ img {
       margin-bottom: 16px;
       font-weight: 300; }
   .card .circle {
-    width: 82px;
-    height: 82px;
+    width: 50px;
+    height: 50px;
     background: #ffffff;
     position: absolute;
     right: 18px;
-    top: -11%;
+    top: -18%;
     border-radius: 100%;
     padding: 8px; }
+    @media screen and (min-width: 321px) {
+      .card .circle {
+        top: -11%;
+        width: 82px;
+        height: 82px; } }
     .card .circle img {
       border-radius: 100%; }
   .card .stats {
