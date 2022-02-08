@@ -4,11 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "sass": "node-sass -w assets/style/scss/ -o assets/style/ --recursive"
+    "sass": "node-sass -w assets/style/scss/ -o assets/style/ --recursive",
+    "http-server": "http-server -p 8080"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^14.1.0",
     "node-sass": "^7.0.1"
   }
 }

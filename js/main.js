@@ -12,6 +12,7 @@ const loadPlayers = async () => {
   try {
     const res = await fetch("../data/player-stats.json");
     const data = await res.json();
+    /* put all player's info in one single object */
     players = data.players.map((player) => {
       return { ...player.player, stats: player.stats };
     });
