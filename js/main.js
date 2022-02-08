@@ -13,6 +13,8 @@ const loadPlayers = async () => {
       return { ...player.player, stats: player.stats };
     });
     createSelector(players);
+    /* call generate content, so we have a player on first load */
+    generateContent(players[0].id);
   } catch (err) {
     console.log(err);
   }
@@ -36,6 +38,18 @@ const createSelector = (players) => {
   return cardArticle.appendChild(selector);
 };
 
-playerCard.appendChild(cardArticle);
+const generateContent = (selected) => {
+  cardTop.classList.add("card__top");
+
+  if (isNaN(selected)) return;
+
+  cardTop.innerHTML = `
+        <figure>
+          <img src="./assets/images/p${selected}.png" alt="">
+        </figure>
+      `;
+};
+
+playerCard.appendChild(cardArticle).appendChild(cardTop);
 
 loadPlayers();
