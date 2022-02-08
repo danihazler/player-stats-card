@@ -17,8 +17,8 @@ e.g:
 
 ```
 Available on:
-  http://127.0.0.1:8080
-  http://192.168.1.111:8080  // -> this one
+  http://xxx.x.x.x:8080
+  http://xxx.xxx.x.xxx:8080  // -> this one
 Hit CTRL-C to stop the server
 ```
 
